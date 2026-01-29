@@ -1,4 +1,3 @@
-//
 // Anonymous struct literal syntax can also be used to compose an
 // "anonymous list" with an array type destination:
 //
@@ -20,6 +19,6 @@ pub fn main() void {
     //
     //     = .{ 'h', 'e', 'l', 'l', 'o' };
     //
-    const hello = .{ 'h', 'e', 'l', 'l', 'o' };
+    const hello: [*:0]u8 = .{ 'h', 'e', 'l', 'l', 'o' };
     print("I say {s}!\n", .{hello});
 }
